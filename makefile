@@ -74,7 +74,6 @@ BT_DEVICE_ADDRESS?=default
 UART?=AUTO
 TRANSPORT?=UART
 ENABLE_DEBUG?=0
-APP_NAME?=HeartRateMonitor
 
 # wait for SWD attach
 ifeq ($(ENABLE_DEBUG),1)
@@ -82,7 +81,7 @@ CY_APP_DEFINES+=-DENABLE_DEBUG=1
 endif
 
 CY_APP_DEFINES+=\
-    -DWICED_BT_TRACE_ENABLE -DDEV_NAME='"$(APP_NAME)"'
+    -DWICED_BT_TRACE_ENABLE
 
 #
 # Components (middleware libraries)
